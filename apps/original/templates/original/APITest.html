@@ -1,0 +1,48 @@
+{% extends "detector/index.html" %}
+
+{% block title %}お天気xファッション{% endblock %}
+
+{% block content %}
+<body>
+  <link
+    rel="stylesheet"
+    href="{{url_for('static', filename='css/APITest.css')}}" />
+  <main>
+    <!-- <br><br> -->
+    <div class="txt">
+    <h2>天気×ファッション</h2>
+</div>
+    <div class="flex">
+    <!-- <img src="images/tenki.png" height="100px"> -->
+    <div class="api">
+      <div class="right">
+          <br>
+          <div class="txt">
+          <p><b>現在地</b>:名古屋</p>
+          <p id="desc1"><b>天気</b>:</p>
+          <p id="desc2"><b>本日の見通し</b>:</p>
+          <p id="desc3"><b>本日のコーデ</b>:</p>
+      </div>
+      <div class="im">
+          <img id="icon" height="500px">
+    </div>
+  </main>
+    
+
+
+
+</body>
+
+
+<footer id="footer" class="mt-5">
+ 
+  <div class="col-md-6 text-md-end mt-3 mt-md-0">
+    <p>© Copyright 2023. All rights reserved. Design by Cloth Charm</p>
+  </div>
+
+ </footer>
+ 
+<script src="{{url_for('static', filename='js/jquery.min.js')}}"></script>
+<script src="{{url_for('static', filename='js/apitest.js')}}"></script>
+ 
+{% endblock %}

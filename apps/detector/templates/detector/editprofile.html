@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>プロフィール編集</title>
+    <link
+      rel="stylesheet"
+      href="{{url_for('static',filename='css/profile_edit.css')}}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static',filename='css/profile_style.css')}}"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500&family=Prata&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <form
+        action="{{url_for('detector.editprofile', id=user.id)}}"
+        method="post"
+        enctype="multipart/form-data"
+        class="form-container"
+      >
+        <div class="left">
+          <label for="imageUpload" id="imageLabel"
+            ><u>プロフィール画像を選択</u></label
+          >
+          {{updateform.csrf_token}} {{updateform.image(id="imageUpload")}}
+          <div class="image-preview">
+            <!-- ここに選択した画像が表示されます -->
+          </div>
+        </div>
+        <div class="right">
+          <h1><b>プロフィール内容入力フォーム</b></h1>
+          <div class="form-item">
+            {{updateform.username.label}} {{updateform.username}}
+          </div>
+          <div class="form-item">
+            {{updateform.explain.label}} {{updateform.explain}}
+          </div>
+          <div class="form-item">
+            {{updateform.address.label}} {{updateform.address}}
+          </div>
+          <div class="form-item">
+            {{updateform.phone.label}} {{updateform.phone}}
+          </div>
+          <div class="form-item1">{{updateform.submit}}</div>
+        </div>
+      </form>
+    </div>
+
+    <script src="{{url_for('static', filename='js/profile_edit.js')}}"></script>
+  </body>
+</html>

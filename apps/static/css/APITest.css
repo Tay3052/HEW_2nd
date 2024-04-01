@@ -1,0 +1,15 @@
+body {
+  color: black;
+  font-size: 19px;
+  background-image: url("../images/tenki1.png");
+  background-size: cover;
+}
+
+/*            480px */
+.api {
+  margin: 30px 0 0 300px;
+}
+
+.im img {
+  display: flex;
+}

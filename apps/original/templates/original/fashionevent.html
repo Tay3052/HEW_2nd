@@ -1,0 +1,120 @@
+{%extends "detector/index.html"%}
+ 
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="icomoon/icomoon.css">
+  <link rel="stylesheet" type="text/css" href="css/vendor.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <link rel="stylesheet" type="text/css" href="style.css">
+ 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500&family=Prata&display=swap" rel="stylesheet">
+</head>
+{%block content%}
+  <link rel="stylesheet" type="text/css"  href="{{url_for('static', filename='css/event.css')}}">
+<body class="homepage">
+<!-- ------------------------------------------------ -->
+ 
+<body class="event">
+ 
+  <div class="bg-img">
+ 
+  </div>
+<br><br><br>
+  <p class="fonts">Fashion event </p>
+  <!-- <img src="{{url_for('static',filename='images/eventpic.png')}}" height="50px"> -->
+ 
+ 
+ 
+  <div class="con">
+    <button id="gachaButton">参加する</button>
+    <div id="gachaResults"></div>
+</div>
+ 
+ 
+  <div class="container">
+      <div class="option">
+          <button onclick="vote('A')" class="eventb" id="eventb">Aに投票！</button><br>
+          <span id="votesA">0</span>票
+      </div>
+      <p id="btn4-text" class="hidden">投票ありがとうございます！</p>
+      <div class="option1">
+          <button onclick="vote('B')" class="eventb1" id="eventb1">Bに投票！</button><br>
+          <span id="votesB">0</span>票
+      </div>
+      <p id="btn4-text1" class="hidden1">投票ありがとうございます！</p>
+  </div>
+ 
+ 
+ 
+ <footer id="footer" class="mt-5">
+ 
+          <div class="col-md-6 text-md-end mt-3 mt-md-0">
+            <p>© Copyright 2023. All rights reserved. Design by Cloth Charm</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="{{url_for('static', filename='js/fashionevent.js')}}"></script>
+  <script type="text/javascript">
+    var imagePath1 = [
+        "{{ url_for('static', filename='images/1.jpg') }}",
+        "{{ url_for('static', filename='images/2.jpg') }}",
+        "{{ url_for('static', filename='images/3.jpg') }}",
+        "{{ url_for('static', filename='images/4.jpg') }}",
+        "{{ url_for('static', filename='images/5.jpg') }}",
+        "{{ url_for('static', filename='images/6.jpg') }}",
+        "{{ url_for('static', filename='images/7.jpg') }}",
+        "{{ url_for('static', filename='images/8.jpg') }}",
+        "{{ url_for('static', filename='images/9.jpg') }}",
+        "{{ url_for('static', filename='images/10.jpg') }}",
+        "{{ url_for('static', filename='images/11.jpg') }}",
+        "{{ url_for('static', filename='images/12.jpg') }}",
+        "{{ url_for('static', filename='images/13.jpg') }}",
+        "{{ url_for('static', filename='images/14.jpg') }}",
+        "{{ url_for('static', filename='images/15.jpg') }}",
+        "{{ url_for('static', filename='images/16.jpg') }}",
+        "{{ url_for('static', filename='images/17.jpg') }}",
+        "{{ url_for('static', filename='images/18.jpg') }}",
+        "{{ url_for('static', filename='images/19.jpg') }}",
+        "{{ url_for('static', filename='images/20.jpg') }}",
+        // 他の画像のパスも追加
+    ];
+    var imagePath2 = [
+    "{{ url_for('static', filename='images/21.jpg') }}",
+    "{{ url_for('static', filename='images/22.jpg') }}",
+    "{{ url_for('static', filename='images/23.jpg') }}",
+    "{{ url_for('static', filename='images/24.jpg') }}",
+    "{{ url_for('static', filename='images/25.jpg') }}",
+    "{{ url_for('static', filename='images/26.jpg') }}",
+    "{{ url_for('static', filename='images/27.jpg') }}",
+    "{{ url_for('static', filename='images/28.jpg') }}",
+    "{{ url_for('static', filename='images/29.jpg') }}",
+    "{{ url_for('static', filename='images/30.jpg') }}",
+    "{{ url_for('static', filename='images/31.jpg') }}",
+    "{{ url_for('static', filename='images/32.jpg') }}",
+    "{{ url_for('static', filename='images/33.jpg') }}",
+    "{{ url_for('static', filename='images/34.jpg') }}",
+    "{{ url_for('static', filename='images/35.jpg') }}",
+    "{{ url_for('static', filename='images/36.jpg') }}",
+    "{{ url_for('static', filename='images/37.jpg') }}",
+    "{{ url_for('static', filename='images/38.jpg') }}",
+    "{{ url_for('static', filename='images/39.jpg') }}",
+    "{{ url_for('static', filename='images/40.jpg') }}",
+    ];
+</script>
+  {%endblock%}
+  <script src="js/jquery.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/SmoothScroll.js"></script>
+  <script src="js/fashionevent.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+ 
+</html>

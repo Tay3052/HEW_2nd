@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{url_for('static', filename='css/todo.css')}}"
+    />
+  </head>
+
+  <body>
+    <div class="container11">
+      <div class="todo-app">
+        <h2>
+          <b>やることリスト</b>
+          <img src="{{url_for('static', filename='images/task.png')}}" />
+        </h2>
+        <div class="row">
+          <input type="text" id="input-box" placeholder="書き込む" />
+          <button onclick="AddTask()">追加</button>
+        </div>
+        <ul id="list-container">
+          <!-- <li class="checked">Task 1</li>
+          <li>Task 2</li>
+          <li>Task 3</li> -->
+        </ul>
+      </div>
+      <div class="center-button">
+        <button class="aaa">
+          <a href="/" style="text-decoration: none">TOPへ戻る</a>
+        </button>
+      </div>
+    </div>
+
+    <script src="{{url_for('static', filename='js/todo.js')}}"></script>
+  </body>
+</html>
